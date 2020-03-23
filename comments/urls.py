@@ -1,7 +1,9 @@
 from django.urls import path
 
-from . import views
+# from . import views
+from .views import CommentIndexView
 
+app_name = 'comments'
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', CommentIndexView.as_view(), name='index'),
 ]
